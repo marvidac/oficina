@@ -3,23 +3,27 @@
   <div class="p-fluid">
     <div class="p-field">
       <label for="name">Nome</label>
-      <input id="name" type="text" pInputText>
+      <input id="name" type="text" pInputText [(ngModel)]="user.name">
     </div>
     <div class="p-field">
       <label for="user">Usuário</label>
-      <input id="user" type="text" pInputText>
+      <input id="user" type="text" pInputText [(ngModel)]="user.user">
     </div>
     <div class="p-field">
       <label for="password">Senha</label>
-      <input id="password" type="password" pPassword>
+      <input id="password" type="password" pPassword [(ngModel)]="user.password">
     </div>
   </div>
-  <div class="p-grid">
-    <div class="p-col-6">
-      <button pButton type="button" label="Salvar"></button>
+</div>
+<div class="p-grid">
+  <div class="p-col-2">
+    <div class="box">
+      <button pButton type="button" label="Salvar" (click)="salvar()"></button>
     </div>
-    <div class="p-col-6">
-      <button pButton type="reset" label="Limpar"></button>
+  </div>
+  <div class="p-col-4">
+    <div class="box">
+      <button pButton type="button" label="Cancelar" (click)="reset()"></button>
     </div>
   </div>
 </div>
