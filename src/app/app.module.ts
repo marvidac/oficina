@@ -7,6 +7,9 @@ import { FormsModule } from '@angular/forms';
 import {InputTextModule} from 'primeng/inputtext';
 import {PasswordModule} from 'primeng/password';
 import {ButtonModule} from 'primeng/button';
+import {SelectButtonModule} from 'primeng/selectbutton';
+
+
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { UsuarioComponent } from './usuario/usuario.component';
@@ -18,16 +21,17 @@ import { ServicoComponent } from './servico/servico.component';
     AppComponent,
     UsuarioComponent,
     HeaderComponent,
-    ServicoComponent
+    ServicoComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     InputTextModule,
     PasswordModule,
     ButtonModule,
-    FormsModule
+    SelectButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

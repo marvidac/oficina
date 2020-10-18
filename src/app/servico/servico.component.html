@@ -2,8 +2,28 @@
     <h3>Cadastro de Serviço</h3>
     <div class="p-fluid">
         <div class="p-field">
-            <label for="name">Descrição</label>
-            <input id="name" type="text" pInputText> 
+            <label for="descricao">Descrição</label>
+            <input id="descricao" type="text" [(ngModel)]="servico.descricao" pInputText> 
+        </div>
+        <div class="p-field">
+            <label for="qtdeHoras">Qtde. Horas</label>
+            <input id="qtdeHoras" type="text" [(ngModel)]="servico.qtdeHoras" pInputText> 
+        </div>
+        <div class="p-field">
+            <label for="status">Utilizável:</label>
+            <p-selectButton id="status" [options]="statusOpt" [(ngModel)]="status" ></p-selectButton>
         </div>
     </div>
 </div>
+<div class="p-grid">
+    <div class="p-col-2">
+      <div class="box">
+        <button pButton type="button" label="Salvar" (click)="salvar()"></button>
+      </div>
+    </div>
+    <div class="p-col-4">
+      <div class="box">
+        <button pButton type="button" label="Cancelar" (click)="reset()"></button>
+      </div>
+    </div>
+  </div>
